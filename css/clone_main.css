@@ -1,0 +1,118 @@
+body {
+  font-family: 'Nanum Gothic', sans-serif;;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* 텍스트 밑줄 속성 - none */
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header{
+  background-color: royalblue;
+}
+
+header .inner {
+  background-color: orange;
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative; /*부모*/
+}
+
+header .logo {
+  height: 75px;
+  position: absolute; /*자식, 부모 position이 있어야 함.*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+}
+
+/* 메뉴 아이템 수평 정렬 */
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+}
+
+/* 메뉴 아이템 구분선 */
+header .sub-menu ul.menu li::before{
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child::before{
+  display: none;
+}
+
+/* <a>기본 속성 lnline이라
+스타일 못입히니까 block 주고
+스타일 적용 */
+header .sub-menu ul.menu li a {
+  padding: 11px 16px;
+  display: block;
+  font-size: 13px;
+  color: #656565;
+}
+
+header .sub-menu ul.menu li a:hover{
+  color: black;
+}
+
+header .sub-menu .search {
+  position: relative;
+  height: 34px;
+}
+
+/* 검색 스타일 */
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width .4s;
+}
+
+/* 검색창 가로 너비 변화 */
+header .sub-menu .search input:focus{
+  width: 190px;
+  border-color: #EA9926;
+}
+
+/* icon 스타일 */
+header .sub-menu .search .material-icons {
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
