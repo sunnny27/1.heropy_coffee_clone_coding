@@ -11,7 +11,14 @@ a {
   text-decoration: none;
 }
 
-/* Header */
+/*INNER*/
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* HEADER */
 header{
   background-color: #F6F5F0;
 }
@@ -21,6 +28,10 @@ header .inner {
   height: 120px;
   margin: 0 auto;
   position: relative; /*부모*/
+}
+
+header > .inner {
+  height: 120px;
 }
 
 header .logo {
@@ -147,7 +158,7 @@ header .main-menu .item.hover .item__name {
 
 header .main-menu .item .item__contents {
   background-color: orange;
-  width: 100;
+  width: 100%;
   position: fixed;
   left: 0;
   display: none;
@@ -155,4 +166,42 @@ header .main-menu .item .item__contents {
 
 header .main-menu .item:hover .item__contents {
   display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2C2A29;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul {
+  padding: 20px 0;
+  display: flex;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+
+}
+
+header .main-menu .item .item__contents .contents__texture h4 {
+
+}
+
+header .main-menu .item .item__contents .contents__texture p {
+
 }
