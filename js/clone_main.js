@@ -102,3 +102,38 @@ promotionToggleBtn.addEventListener('click', function () {
     promotionEl.classList.add('hide');
   }
 });
+
+//플로팅 요소 관리
+
+gsap.to('.floating1', 1.5, {
+  delay: 1, 
+  y: 15,
+  repeat: -1, 
+  yoyo: true, 
+  ease: Power1.easeInOut 
+});
+gsap.to('.floating2', 2, {
+  delay: .5,
+  y: 15,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+});
+gsap.to('.floating3', 2.5, {
+  delay: 1.5,
+  y: 20,
+  repeat: -1,
+  yoyo: true,
+  ease: Power1.easeInOut
+});
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl,
+      triggerHook: .8
+    })
+    .setClassToggle(spyEl, 'show') 
+    .addTo(new ScrollMagic.Controller());
+});
