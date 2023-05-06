@@ -22,17 +22,22 @@ searchInputEl.addEventListener('blur',function(){
 
 // 페이지 스크롤에 따른 요소 제어
 const badgeEl = document.querySelector('header .badges');
-
 window.addEventListener('scroll', function () {
-  console.log(widdow.scrollY);
-});
+  console.log(window.scrollY);
 
-window.addEventListener('scroll',function () {
-  console.log(widdow.scrollY);
-  if (this.window.scrollY > 500) {
-    badgeEl.style.display = 'none';
-  }
-  else {
-    badgeEl.style.display = 'block';
+  if (window.scrollY > 500) {
+    // 페이지 스크롤 위치가 500이 넘을 때 Badge 요소 숨기기
+    gsap.to(badgeEl, .6, {
+      opacity: 0,
+      display: 'none'
+    });
+
+  // 페이지 스크롤 위치가 500이 넘지 않을 때
+  } else {
+    // Badge 요소 보이기
+    gsap.to(badgeEl, .6, {
+      opacity: 1,
+      display: 'block'
+    });
   }
 });
