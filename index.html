@@ -16,6 +16,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script defer src="./js/clone_main.js"></script>
 </head>
@@ -355,5 +361,97 @@
     </div>
   </div>
 </header>
+<!-- VISUAL -->
+<section class="visual">
+  <div class="inner">
+    <div class="title fade-in">
+      <img src="./images/visual_title.png" alt="DELIGHTFUL START TO THE YEARS" />
+      <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
+    </div>
+    <div class="fade-in">
+      <img src="./images/visual_cup1.png" alt="Cup1" class="cup1 image" />
+      <img src="./images/visual_cup1_text.png" alt="헤이즐넛 아메리카노" class="cup1 text" />
+    </div>
+    <div class="fade-in">
+      <img src="./images/visual_cup2.png" alt="Cup2" class="cup2 image" />
+      <img src="./images/visual_cup2_text.png" alt="카라멜 크럼블 모카" class="cup2 text" />
+    </div>
+    <div class="fade-in">
+      <img src="./images/visual_spoon.png" alt="Spoon" class="spoon" />
+    </div>
+  </div>
+</section>
+<!-- NOTICE -->
+<section class="notice">
+  <div class="bg-left"></div>
+  <div class="bg-right"></div>
+  <div class="inner">
+    <div class="inner__left">
+      <h2>공지사항</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="javascript:void(0)">크리스마스 & 연말연시 매장 영업시간 변경 안내</a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:void(0)">[당첨자 발표] 커피 영수증 이벤트</a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:void(0)">애플리케이션 버전 업데이트 안내</a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:void(0)">[당첨자 발표] 전자영수증 이벤트</a>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="notice-more">
+        <span class="material-icons">add_circle</span>
+      </a>
+    </div>
+    <div class="inner__right">
+      <h2>커피 프로모션</h2>
+      <div class="toggle-promotion">
+        <div class="material-icons">upload</div>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
+
+<!-- PROMOTION -->
+<section class="promotion">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./images/promotion_slide1.jpg" alt="온라인 샵 런칭 기념, 민트 초코 브라우니 무료! 기간: 2023년 3월 3일 ~ 2023년 3월 31일" />
+        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/promotion_slide2.jpg" alt="뉴이어, 헤로피 커피와 함께 즐겁고 활기차게 시작하세요! 기간: 2023년 1월 1일 ~ 2월 14일" />
+        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/promotion_slide3.jpg" alt="따뜻한 아메리카노를 주문하면, 달콤한 초코칩 쿠기 1+1 기간: 2025년 12월 16일 하루만" />
+        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/promotion_slide4.jpg" alt="행사 기간동안 음료 주문시, 모든 디저트 80% 할인! 기간: 2023년 4월 1일 ~ 2024년 4월 1일" />
+        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+      </div>
+      <div class="swiper-slide">
+        <img src="./images/promotion_slide5.jpg" alt="골드 회원 가입시, 따뜻한 코코아를 무료로 드립니다. 기간: 2024년 1월 24일 ~ 1월 30일" />
+        <a href="javascript:void(0)" class="btn">자세히 보기</a>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev">
+    <span class="material-icons">arrow_back</span>
+  </div>
+  <div class="swiper-button-next">
+    <span class="material-icons">arrow_forward</span>
+  </div>
+</section>
+
+<!-- REWARDS -->

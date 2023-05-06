@@ -41,3 +41,64 @@ window.addEventListener('scroll', function () {
     });
   }
 });
+
+
+/* 상단 이미지 페이드인 */
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) {
+  // 각 요소들을 순서대로 보여지게 한다.
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .7,
+    opacity: 1
+  });
+});
+
+/* 슬라이드 요소 */
+new Swiper('.notice .swiper', {
+  direction: 'vertical', 
+  autoplay: true,
+  loop: true 
+});
+
+new Swiper('.promotion .swiper', {
+  autoplay: { 
+    delay: 5000 // 5초마다 슬라이드 바뀜
+  },
+  loop: true, // 반복 재생 여부
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  pagination: { 
+    el: '.promotion .swiper-pagination', 
+    clickable: true 
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-button-prev', 
+    nextEl: '.promotion .swiper-button-next'
+  }
+});
+
+new Swiper('.awards .swiper', {
+  autoplay: true, 
+  loop: true, 
+  spaceBetween: 30, 
+  slidesPerView: 5,
+  navigation: { 
+    prevEl: '.awards .swiper-button-prev', 
+    nextEl: '.awards .swiper-button-next' 
+  }
+});
+
+/* 프로모션 슬라이드*/
+
+const promotionEl = document.querySelector('section.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+
+//토글 버튼을 클릭했을 때
+promotionToggleBtn.addEventListener('click', function () {
+  if (promotionEl.classList.contains('hide')) {
+    promotionEl.classList.remove('hide');
+  } else {
+    promotionEl.classList.add('hide');
+  }
+});
