@@ -22,6 +22,8 @@ searchInputEl.addEventListener('blur',function(){
 
 // 페이지 스크롤에 따른 요소 제어
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
+
 window.addEventListener('scroll', function () {
   console.log(window.scrollY);
 
@@ -31,6 +33,10 @@ window.addEventListener('scroll', function () {
       opacity: 0,
       display: 'none'
     });
+    gsap.to(toTopEl, .6, {
+      opacity: 1,
+      x: 0
+    });
 
   // 페이지 스크롤 위치가 500이 넘지 않을 때
   } else {
@@ -39,9 +45,17 @@ window.addEventListener('scroll', function () {
       opacity: 1,
       display: 'block'
     });
+    gsap.to(toTopEl, .6, {
+      opacity: 0,
+      x: 100
+    });
   }
 });
-
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .6, {
+    scrollTo: 0
+  });
+});
 
 /* 상단 이미지 페이드인 */
 const fadeEls = document.querySelectorAll('.visual .fade-in');
