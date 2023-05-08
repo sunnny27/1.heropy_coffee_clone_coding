@@ -1,3 +1,22 @@
+// 상단 팝업
+function slideUp() {
+  var box = document.getElementById("box");
+  var height = box.clientHeight;
+  var animation = box.animate(
+    [
+      { height: height + "px" },
+      { height: "0px" },
+    ],
+    {
+      duration: 500,
+      easing: "ease-out",
+    }
+  );
+  animation.onfinish = function () {
+    box.style.display = "none";
+  };
+}
+
 // 검색창 요소찾기 (.search)
 // 검색요소 searchEl 선언, 입력요소 searchinputEl 선언
 const searchEl = document.querySelector('.search');
@@ -75,13 +94,12 @@ new Swiper('.notice .swiper', {
 });
 
 new Swiper('.promotion .swiper', {
-  autoplay: { 
-    delay: 5000 // 5초마다 슬라이드 바뀜
-  },
+  autoplay: { delay: 5000},  // 5초마다 슬라이드 바뀜
   loop: true, // 반복 재생 여부
   slidesPerView: 3,
   spaceBetween: 10,
   centeredSlides: true,
+
   pagination: { 
     el: '.promotion .swiper-pagination', 
     clickable: true 
@@ -151,3 +169,6 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show') 
     .addTo(new ScrollMagic.Controller());
 });
+
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
