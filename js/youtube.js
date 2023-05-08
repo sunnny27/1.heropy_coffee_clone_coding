@@ -9,11 +9,11 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 function onYouTubeIframeAPIReady() {
   new YT.Player('player', {
-    videoId: 'Sbxxnu0mQxo',
+    videoId: 'cVGKO1fm_FI',
     playerVars: {
       autoplay: true, // 자동 재생 유무
       loop: true, // 반복 재생 유무
-      playlist: 'Sbxxnu0mQxo' // 반복 재생할 유튜브 영상 ID 목록
+      playlist: 'cVGKO1fm_FI' // 반복 재생할 유튜브 영상 ID 목록
     },
     events: {
       onReady: function (event) {

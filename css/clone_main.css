@@ -340,7 +340,7 @@ img {
 /* VISUAL */
 .visual {
   margin-top: 100px;
-  background-image: url("../images/book2.jpg");
+  background-image: url("../images/bookstore1.jpg");
   background-position: center;
 }
 
@@ -716,7 +716,7 @@ img {
 
 /* RESERVE COFFEE */
 .reserve-coffee {
-  background-image: url("../images/reserve_bg.jpg");
+  background-image: url("../images/");
 }
 
 .reserve-coffee .inner {
@@ -773,7 +773,7 @@ img {
 /* RESERVE STORE */
 
 .reserve-store {
-  background-image: url("../images/reserve_store_bg.jpg");
+  background-image: url("../images/new_store1.jpeg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -913,7 +913,7 @@ img {
 
 /* FOOTER */
 footer {
-  background-color: #272727;
+  background-color: #88B04B;
   border-top: 1px solid #333;
 }
 
@@ -948,14 +948,14 @@ footer .menu li:last-child::before {
 
 footer .menu li a {
   display: block;
-  color: #CCC;
+  color: white;
   font-size: 12px;
   font-weight: 700;
   padding: 15px;
 }
 
 footer .menu li a.orange {
-  color: #EA9926;
+  color: green;
 }
 
 footer .btn-group {
@@ -980,7 +980,7 @@ footer .info {
 
 footer .info span {
   margin-right: 20px;
-  color: #999;
+  color: white;
   font-size: 12px;
 }
 
@@ -989,7 +989,7 @@ footer .info span:last-child {
 }
 
 footer .copyright {
-  color: #999;
+  color: white;
   font-size: 12px;
   text-align: center;
   margin-top: 12px;
